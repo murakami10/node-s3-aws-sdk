@@ -1,3 +1,5 @@
-const AWS = require('aws-sdk');
+const { S3Client } = require('@aws-sdk/client-s3');
+require('dotenv').config();
 
-AWS.config.update({ region:  });
+console.log(process.env.AWS_REGION);
+const s3Client = new S3Client({ region: process.env.AWS_REGION });
