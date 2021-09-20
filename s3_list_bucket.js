@@ -1,7 +1,5 @@
-const { S3Client, ListBucketsCommand } = require('@aws-sdk/client-s3');
-require('dotenv').config();
-
-const s3Client = new S3Client({ region: process.env.AWS_REGION });
+import { ListBucketsCommand } from '@aws-sdk/client-s3';
+import { s3Client } from './lib/s3Client.js';
 
 const run = async () => {
   try {
